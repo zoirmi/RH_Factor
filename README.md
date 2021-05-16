@@ -25,3 +25,6 @@ _$ python3 main.py -r [J][a][z]+ -f input/input_1.txt input/input_2.txt input/in
 
 ![Screenshot from 2021-05-16 03-42-21](https://user-images.githubusercontent.com/18490872/118381953-ce254d00-b5f8-11eb-8e24-38c927b76cb6.png)
 
+$ python3 main.py -r [J][a][z]+ -c
+
+![Screenshot from 2021-05-16 08-16-21](https://user-images.githubusercontent.com/18490872/118386280-0c356780-b61f-11eb-905b-5c1a04aaf9b6.png)
