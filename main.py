@@ -14,16 +14,16 @@ def main():
         'color': args.color,
         'machine': args.machine
     }
+    try:
+        Path('logs/').mkdir(exist_ok=True)  # Create 'logs' in cwd if it doesn't already exist
+    except:
+        logging.error("Failed to create logs folder")
     timestamp = datetime.now().strftime('%Y-%m-%d_%H%M')
     log_filename = ("logs/regex_main_{timestamp}.log".format(timestamp=timestamp))
     logging.basicConfig(filename=log_filename,
                         format="%(asctime)s.%(msecs)03d [%(levelname)s]  %(message)s",
                         datefmt="%Y/%m/%d %H:%M:%S",
                         level=logging.INFO)
-    try:
-        Path('logs/').mkdir(exist_ok=True)  # Create 'logs' in cwd if it doesn't already exist
-    except:
-        logging.error("Failed to create logs folder")
     # Execute
     logging.info("Session started")
     text_generator = input_generator(args)      # Using Yield generator to share code for input file/STDIN
