@@ -24,11 +24,6 @@ def main():
         Path('logs/').mkdir(exist_ok=True)  # Create 'logs' in cwd if it doesn't already exist
     except:
         logging.error("Failed to create logs folder")
-
-    stdout_handler = logging.StreamHandler(sys.stdout)
-
-
-
     # Execute
     logging.info("Session started")
     text_generator = input_generator(args)      # Using Yield generator to share code for input file/STDIN
